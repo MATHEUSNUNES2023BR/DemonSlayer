@@ -1,0 +1,34 @@
+@use 'cores';
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    background:darken(cores.$corDeFundo, 8);
+    &__nav{
+        width: 60%;
+        &__links{
+            display: flex;
+            list-style-type: none;
+            justify-content: space-around;
+            &__item{
+                a{  
+                    font-size: 1.6rem;
+                    color: cores.$corPrimaria;
+                    text-decoration: none;
+                    &:hover{
+                        color: darken(cores.$corPrimaria, 4);
+                        border: none;
+                        border-bottom: 3px solid azure;
+                    }
+                }
+            }
+        }
+    }  
+
+    &__logo{
+        width: 5.2rem;
+        padding: .1rem;
+    }
+
+}

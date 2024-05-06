@@ -1,0 +1,12 @@
+@use 'cores';
+@use 'header';
+@use 'personagens';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Freeman", sans-serif;
+}
+body{
+    background-color: cores.$corDeFundo;
+}
