@@ -1,26 +1,40 @@
 @use 'cores';
-.personagens{
+.main{
     display: flex;
     justify-content: space-between;
-    height: 82vh;
+    width: 100vw;
+    height: 88vh;
+    background-image: url(../../src/assets/personagens-background/tanjiro.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+   
+}
+.personagens{
     &__nav{
-        margin-right: 2.5rem;
-        margin-top: 4rem;
+        margin-right:3vw;
+        margin-top: 8vh;
         &__lista{
             display: grid;
             grid-template-columns: (repeat(5, 1fr));
             list-style-type: none;
-            gap: 3rem;
+            gap: 4vw;
             text-wrap: nowrap;
             &__item{
                 display: flex;
                 flex-direction: column;
-                width: 4.7rem;
-                font-size: 1.15rem;
-                color: cores.$corPrimaria;
+                width: 6.2vw;
+                font-size: calc(1vw + 1vh); 
+                color: cores.$corSecundaria;
                 text-align: center;
                 animation: transform 1s ease-in-out; 
                 cursor: pointer;
+                a{
+                    border: 2px solid rgb(86, 88, 94);
+                    background-color: cores.$corPrimaria;
+                    border-radius: 10px;
+                }
                 &:hover{
                     transform: scale(1.15); 
                 }
@@ -32,7 +46,6 @@
         }
     }
     &__selecionado{
-        margin-left: 2rem;
         img{
           display: block;
           image-rendering: optimizeQuality;
@@ -41,3 +54,36 @@
         }
     }
 }
+.selecionado{
+        width: 50%;
+        &__dados{
+            display: flex;
+            flex-direction: column;
+            margin-top: 2vw;
+            &__name{
+                text-align: center;
+                font-size: calc(4vw + 1vh);
+                text-shadow: 1px 2px white;
+                text-transform: uppercase;
+                color: crimson;
+            }
+            &__respiracao{
+                font-size: calc(2.7vw + 2vh);
+                text-transform: uppercase;
+                padding-top: 40vh;
+                padding-left: 2vw;
+                color: #c23616;
+                font-style: oblique;
+                text-shadow: 2px 3px white;
+                font-weight: bolder;
+                #Respiracao{
+                    color: cornsilk;
+                    text-shadow: 1px 2px purple;
+                    background-image: linear-gradient(120deg, rgb(0, 47, 255), rgb(212, 116, 116));
+                    padding: 0.5rem;
+                    border: 2px solid #727272;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }

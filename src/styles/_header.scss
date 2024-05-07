@@ -1,10 +1,11 @@
 @use 'cores';
-.header{
+    .header{
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
-    background:darken(cores.$corDeFundo, 8);
+    background: lighten(cores.$corDeFundo, 0.5);
+    height: 12vh;
     &__nav{
         width: 60%;
         &__links{
@@ -13,7 +14,7 @@
             justify-content: space-around;
             &__item{
                 a{  
-                    font-size: 1.6rem;
+                    font-size: calc(1.4vw + 1.4vh);
                     color: cores.$corPrimaria;
                     text-decoration: none;
                     &:hover{
@@ -27,8 +28,8 @@
     }  
 
     &__logo{
-        width: 5.2rem;
-        padding: .1rem;
+        width: calc(4.5vw + 1rem);
+        padding-top: 0.5rem;
     }
 
 }
