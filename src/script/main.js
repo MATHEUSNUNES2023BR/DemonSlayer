@@ -20,6 +20,20 @@ const personagensNomes = [
     {tengen: 'Tengen Uzui', respiracao: 'Som'},
 ]
 const mainBackground = document.querySelector('.main')
+
+let imageUrls = [
+    'yoriichi.jpg', 'gyu.jpg', 'shinobu.jpg', 'kyojuro.jpg',
+    'mitsuri.jpg', 'obanai.jpg', 'sanemi.jpg', 'gyomei.jpg',
+    'muichiro.jpg', 'muichiro.jpg'
+];
+function preloadImages(urls) {
+    for (var i = 0; i < urls.length; i++) {
+        var img = new Image();
+        img.src = "../../dist/assets/personagens-background/" + urls[i];
+    }
+}
+preloadImages(imageUrls);
+
 getPersonagem.forEach((p)=>{
     p.addEventListener('click', (e)=>{
         const dataName = p.dataset.personagens
