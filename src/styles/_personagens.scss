@@ -110,12 +110,11 @@
             width: 100%;
             &__dados{
                 &__name{
-                    font-size: calc(4vw + 3.5vh);
+                    font-size: calc(3.3vw + 3vh);
 
                 }
                 &__respiracao{
-                    padding-top:28vh;
-
+                    padding-top: calc(8vw + 10vh + 5rem);
                 }
             }
         }
