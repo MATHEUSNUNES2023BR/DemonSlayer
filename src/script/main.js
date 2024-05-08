@@ -23,7 +23,7 @@ const mainBackground = document.querySelector('.main')
 getPersonagem.forEach((p)=>{
     p.addEventListener('click', (e)=>{
         const dataName = p.dataset.personagens
-        mainBackground.style.backgroundImage = `url(../../src/assets/personagens-background/${dataName}.jpg)`;
+        mainBackground.style.backgroundImage = `url(../assets/personagens-background/${dataName}.jpg)`;
         personagensNomes.forEach((personagem)=>{
             if(personagem[dataName]){
                 if(dataName == 'nezuko'){

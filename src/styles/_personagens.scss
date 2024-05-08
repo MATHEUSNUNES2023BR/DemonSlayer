@@ -24,10 +24,10 @@
 
         &__lista{
             display: grid;
-            grid-template-columns: (repeat(5, 1fr));
+            grid-template-columns: repeat(5, 1fr);
             list-style-type: none;
             gap: 4vw;
-            text-wrap: nowrap;
+            white-space: nowrap;
             &__item{
                 display: flex;
                 flex-direction: column;
