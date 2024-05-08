@@ -10,9 +10,9 @@
         font-size: calc(0.6rem + 0.5vw);
     }
     @media(max-width: 768px){
-        text-align: center;
         &__texto{
-            width: 70%;
+            width: 98%;
+            font-size: calc(1rem + 0.5vw);
             margin: 0 auto;
         }
     }
