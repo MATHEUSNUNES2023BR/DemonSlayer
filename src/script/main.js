@@ -1,18 +1,18 @@
-let imageUrls = [
-    'yoriichi.jpg', 'gyu.jpg', 'shinobu.jpg', 'kyojuro.jpg',
-    'mitsuri.jpg', 'obanai.jpg', 'sanemi.jpg', 'gyomei.jpg',
-    'muichiro.jpg', 'muichiro.jpg'
-];
 window.onload = function() {
+    let imageUrls = [
+        'yoriichi.jpg', 'gyu.jpg', 'shinobu.jpg', 'kyojuro.jpg',
+        'mitsuri.jpg', 'obanai.jpg', 'sanemi.jpg', 'gyomei.jpg',
+        'muichiro.jpg', 'muichiro.jpg'
+    ];
+    
+    function preloadImages(urls) {
+        for (var i = 0; i < urls.length; i++) {
+            var img = new Image();
+            img.src = "../../dist/assets/personagens-background/" + urls[i];
+        }
+    }
     preloadImages(imageUrls);
 };
-
-function preloadImages(urls) {
-    for (var i = 0; i < urls.length; i++) {
-        var img = new Image();
-        img.src = "../../dist/assets/personagens-background/" + urls[i];
-    }
-}
 
 const getPersonagem = document.querySelectorAll('.personagens__nav__lista__item')
 const selecionarNome = document.querySelector('.selecionado__dados__name')
