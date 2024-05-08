@@ -4,17 +4,24 @@
     justify-content: space-between;
     width: 100vw;
     height: 88vh;
-    background-image: url(../../src/assets/personagens-background/tanjiro.jpg);
+    background-image: url(../assets/personagens-background/tanjiro.jpg);
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
-   
+    @media(max-width: 768px){
+        flex-direction: column;
+        height: auto;
+        background-position-y: 8vw;
+        background-size: contain;
+
+    }
 }
 .personagens{
     &__nav{
         margin-right:3vw;
         margin-top: 8vh;
+
         &__lista{
             display: grid;
             grid-template-columns: (repeat(5, 1fr));
@@ -24,7 +31,7 @@
             &__item{
                 display: flex;
                 flex-direction: column;
-                width: 6.2vw;
+                width: 6vw;
                 font-size: calc(1vw + 1vh); 
                 color: cores.$corSecundaria;
                 text-align: center;
@@ -43,6 +50,19 @@
                     border-radius: 50%;
                 }
             }
+        }
+        @media (max-width: 768px) {
+            margin: 0;
+            &__lista{
+                gap: 5vw;
+                grid-template-columns: (repeat(4, 1fr));
+                justify-items: center;
+                margin-top: 10vh;
+                &__item{
+                    width: 15vw;
+                }
+            }
+    
         }
     }
     &__selecionado{
@@ -83,6 +103,19 @@
                     padding: 0.5rem;
                     border: 2px solid #727272;
                     border-radius: 20px;
+                }
+            }
+        }
+        @media(max-width: 768px){
+            width: 100%;
+            &__dados{
+                &__name{
+                    font-size: calc(4vw + 3.5vh);
+
+                }
+                &__respiracao{
+                    padding-top:28vh;
+
                 }
             }
         }

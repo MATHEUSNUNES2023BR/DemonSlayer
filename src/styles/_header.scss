@@ -1,5 +1,5 @@
 @use 'cores';
-    .header{
+.header{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -31,5 +31,19 @@
         width: calc(4.5vw + 1rem);
         padding-top: 0.5rem;
     }
-
+    @media(max-width: 768px){
+        &__nav{
+            width: 80%;
+            &__links{
+                &__item{
+                    a{  
+                        font-size: calc(1vw + 2.4vh);
+                    }
+                }
+            }
+        }
+        &__logo{
+            width: calc(4.5vw + 3rem);
+        }
+    }
 }
