@@ -7,13 +7,19 @@
         width: 90%;
         margin-top: calc(1vw + 2vh);
         text-align: justify;
-        font-size: calc(0.6rem + 0.5vw);
+        font-size: calc(1rem + 0.5vw);
     }
     @media(max-width: 768px){
+        padding-top:calc(5vw + 2vh);
+        font-size: calc(0.8rem + 1vw);
         &__texto{
-            width: 98%;
-            font-size: calc(1rem + 0.5vw);
-            margin: 0 auto;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            width: 95%;
+            text-align: justify;
+            font-size: calc(1.2rem + 0.5vw);
+            margin: 0;
+            
         }
     }
 }
