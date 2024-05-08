@@ -1,6 +1,7 @@
 @use 'cores';
 @use 'header';
 @use 'personagens';
+@use 'historia';
 *{
     margin: 0;
     padding: 0;
@@ -9,4 +10,5 @@
 }
 body{
     background-color: cores.$corDeFundo;
+    overflow-x: hidden;
 }
