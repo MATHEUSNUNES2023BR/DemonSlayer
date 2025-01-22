@@ -71,8 +71,19 @@ const mainBackground = document.querySelector('.main')
 
 getPersonagem.forEach((p)=>{
     p.addEventListener('click', (e)=>{
-        const dataName = p.dataset.personagens
-        mainBackground.style.backgroundImage = `url(../../dist/assets/personagens-background/${dataName}.jpg)`;
+        // Remove classe ativa de todos
+        getPersonagem.forEach(item => item.classList.remove('personagem-ativo'));
+        // Adiciona classe ativa ao selecionado
+        p.classList.add('personagem-ativo');
+        
+        // Adiciona efeito de transição suave no background
+        mainBackground.style.opacity = '0';
+        setTimeout(() => {
+            const dataName = p.dataset.personagens;
+            mainBackground.style.backgroundImage = `url(../../dist/assets/personagens-background/${dataName}.jpg)`;
+            mainBackground.style.opacity = '1';
+        }, 300);
+
         personagensNomes.forEach((personagem)=>{ 
             if(personagem[dataName]){
                 if(dataName == 'nezuko'){
@@ -90,3 +101,17 @@ getPersonagem.forEach((p)=>{
         })
     })
 })
+
+// Adicionar efeito de parallax no background
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    mainBackground.style.backgroundPositionY = `${scrolled * 0.5}px`;
+});
+
+// Adicionar animação de entrada nos elementos
+document.addEventListener('DOMContentLoaded', () => {
+    const elementos = document.querySelectorAll('.personagens__nav__lista__item, .selecionado__dados, .historia__texto');
+    elementos.forEach(elemento => {
+        elemento.classList.add('fade-in');
+    });
+});

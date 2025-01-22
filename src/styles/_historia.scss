@@ -1,26 +1,31 @@
 @use 'cores';
-.historia{
-    margin-top: calc(2vw + 2vh);
-    margin-left: 3vw;
-    color: cores.$corPrimaria;
-    &__texto{
-        width: 90%;
-        margin-top: calc(1vw + 2vh);
-        text-align: justify;
-        font-size: calc(1rem + 0.5vw);
-        padding-bottom: 2rem;
-    }
-    @media(max-width: 768px){
-        padding-top:calc(5vw + 2vh);
-        font-size: calc(0.8rem + 1vw);
-        &__texto{
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-            width: 95%;
-            text-align: justify;
-            font-size: calc(1.2rem + 0.5vw);
-            margin: 0;
-            
+.historia {
+    position: relative;
+    padding: 40px;
+    background: rgba(30, 39, 46, 0.95);
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    
+    &__titulo {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        background: linear-gradient(45deg, #ff0000, #ff6b6b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+        &--personagem {
+            font-weight: 700;
         }
+    }
+    
+    &__texto {
+        line-height: 1.8;
+        letter-spacing: 0.5px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        border-left: 4px solid #ff0000;
     }
 }
